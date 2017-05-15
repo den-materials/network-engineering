@@ -51,6 +51,8 @@ If you do some "quick" math in your head, you can see that means our IP address 
 
 `2^8*2^8*2^8*2^8 = 256*256*256*256 ≈ 4.3 billion address possibilities`
 
+![](simpsonsPanic.gif)
+
 WHAT?! But there are almost 7.5 billion people on Earth.  We're going to run out of addresses!  This panic you are feeling was very real 15 years ago, but some smart people came up with two solutions that have abated the impending IPocalypse.
 
 1. Private IP addresses
