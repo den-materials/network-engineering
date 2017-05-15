@@ -21,11 +21,11 @@
 The three most important parts of every address are:
 
 1. The MAC Address, also known as a Layer 2 address, or a link-local address
-  1. The MAC Address gets you from point A to point B *within* a network
+    - The MAC Address gets you from point A to point B *within* a network
 2. The IP Address, also known as a Layer 3 address, or a network address
-  2. The IP Address gets you from point A to point B *between* networks
+    - The IP Address gets you from point A to point B *between* networks
 3. The Port, also known as a Layer 4 address
-  3. The Port gets you from point A to point B *within a computer*
+    - The Port gets you from point A to point B *within a computer*
 
 So a whole bunch of `0s` and `1s` get transmitted through wires or the air, but how does the traffic get redirected to its destination?
 
@@ -62,7 +62,7 @@ In order for our package to get to Computer B, and to actually run code on the o
 1. A network (IP) address to get our package from Computer A's building/network to Computer B's building/network over and incredibly interconnected network of routers, switches, cables, and sharks.
 2. A local (MAC) address to get our package out of Computer A's building/network and to get to Computer B once it is inside Computer B's building/network.
 3. A TCP port like HTTP (80) or HTTPS (443) so Computer B knows how to run the instructions coming from Computer A.
-  1. For instance, `please send back your index.html and all your front-end resources so I can load your page`
+    - For instance, `please send back your index.html and all your front-end resources so I can load your page`
 
 When the package gets to Computer B's building, we rip open doll number one.
 
