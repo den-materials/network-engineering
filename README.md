@@ -14,9 +14,38 @@
 
 ## Network Addresses
 
+<!--Draw up envelope with MAC Address, IP Address, Port -->
 
+The three most important parts of every address are:
 
-## Network Maps
+1. The MAC Address, also known as a Layer 2 address, or a link-local address
+  1. The MAC Address gets you from point A to point B *within* a network
+2. The IP Address, also known as a Layer 3 address, or a network address
+  2. The IP Address gets you from point A to point B *between* networks
+3. The Port, also known as a Layer 4 address
+  3. The Port gets you from point A to point B *within a computer*
+
+So a whole bunch of `0s` and `1s` get transmitted through wires or the air, but how does the traffic get redirected to its destination?
+
+Tables.  Lots of tables.
+
+### MAC Tables
+
+MAC tables are held on "Layer 2 devices" like switches.  They map MAC addresses to ports or wifi repeaters/receivers.  Like this:
+
+![](macTable.png)
+
+### ARP Tables
+
+ARP Tables are used for conversion from IP address to MAC address and vice versa.  I.e. "I know this should be going to 192.168.1.4, but what is the MAC address on it?"  Once we know the MAC address, we can use a MAC table to find which direction to send our data to get to its destination.
+
+![](arpTable.jpg)
+
+### Routing Tables
+
+Routing tables are held on "Layer 3 devices" like routers.  They map IP networks to ports, so a router knows which way to forward traffic to certain networks.  Routing tables are designed to be incredibly dynamic and redundant.  Telecom building loses power in Detroit?  Not a problem, after a few unsuccessful attempts of sending traffic through Detroit, we'll try Chicago.  And we're up and rocking again.
+
+![](routingTable.png)
 
 ## Network Layers
 
@@ -42,3 +71,20 @@ When the package arrives at the correct port inside Computer B, we execute the c
 ![](russianNesting.jpg)
 
 ## Network Hardware
+
+### Anatomy of an Ethernet cable
+
+Your average `cat5e` cable contains eight wires.  In order to facilitate non-stop conversation between the two ends of the cable (two computers, for instance), these wires are "crossed over" so that the output of one computer goes directly to the input of the other computer.  That looks like this:
+
+![](crossoverCable.gif)
+![](crossoverDiagram.png)
+
+### Network Maps
+
+OK, let's put all that together.  What does it look like when we create all the connections we need to share data with the world?  Below is a very small piece of the giant map of the Internet and all its devices:
+
+![](hybridMap.png)
+
+Zoom out a bit, and here's the 10,000 foot view of that giant map:
+
+![](network-nodes.png)
