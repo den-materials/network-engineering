@@ -6,6 +6,9 @@
 
 *By the end of this lesson, students will be able to:*
 
+- **Understand** the role of MAC, IP address, and port
+- **Describe** how data travels through the Internet
+
 ## Pre-Requisites
 
 *Before this lesson, students should be able to:*
